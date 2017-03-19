@@ -21,12 +21,12 @@ class Quiz extends Component {
 
     renderOptions() {
         return(
-                <div className='options'>
-<QuizOptions />
-<QuizOptions />
-<QuizOptions />
-<QuizOptions />
-                    </div> 
+            <div className='options'>
+    {this.state.riddle.resultsArray.map((option, i) => 
+        <QuizOptions option={option} key={i}/>
+        )}
+                   
+            </div> 
         );
     }
     render(){
